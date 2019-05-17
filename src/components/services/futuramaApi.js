@@ -1,9 +1,16 @@
-export const getQuotes = (count = 10) => {
-  return fetch(`https://futuramaapi.herokuapp.com/api/quotes/${count}`)
+export const getQuotes = () => {
+  return fetch('https://rickandmortyapi.com/api/character')
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'bad API call!';
 
       return json;
-    });
+    })
+    .then(({ results }) => ({
+      quotes: results.map(quote => ({
+        name: quote.name,
+        image: quote.image,
+        gender: quote.gender
+      }))
+    }));
 };

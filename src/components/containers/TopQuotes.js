@@ -9,7 +9,7 @@ export default class TopQuotes extends PureComponent {
 
   componentDidMount() {
     getQuotes()
-      .then(quotes => this.setState({ quotes }));
+      .then(({ quotes }) => this.setState({ quotes }));
   }
 
   render() {

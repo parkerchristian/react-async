@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export default function Quote({ quote }) {
   return (
     <section id="character-section">
-      <p>{quote.character}</p>
+      <p>{quote.name}</p>
       <img src={quote.image}></img>
-      <p>{quote.quote}</p>
+      <p>{quote.gender}</p>
     </section>
   );
 }
