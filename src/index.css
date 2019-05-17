@@ -3,10 +3,38 @@
 }
 
 body {
+  background: tan;
   background-repeat: no-repeat;
   background-size: cover;
   
   min-height: calc(100vh - 0);
   position: relative;
   padding-bottom: 0;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  margin: 1em;
+
+  min-width: 15em;
+  max-width: 15em;
+  min-height: 13em;
+  max-height: 20em;
+
+  background: white;
+}
+
+img {
+  width: 12em;
+  height: 12em;
 }
